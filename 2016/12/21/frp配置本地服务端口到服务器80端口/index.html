@@ -38,19 +38,79 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="##搭建环境：
+
+ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
+
+apache tomcat 7
+
+java 7 
+
+frp 0.8.1 linux
+
+
+##搭建过程：
+
+资源准备
+frp 0.8.1 linux 二进制包
+tomcat
+任意版本jvm
+
+
+开始安装
+
+分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/12/17/hello-world/index.html">
+<meta property="og:title" content="frp配置本地服务端口到服务器80端口">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/frp配置本地服务端口到服务器80端口/index.html">
 <meta property="og:site_name" content="zhoudazhuang">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-12-17T12:33:36.968Z">
+<meta property="og:description" content="##搭建环境：
+
+ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
+
+apache tomcat 7
+
+java 7 
+
+frp 0.8.1 linux
+
+
+##搭建过程：
+
+资源准备
+frp 0.8.1 linux 二进制包
+tomcat
+任意版本jvm
+
+
+开始安装
+
+分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
+<meta property="og:updated_time" content="2016-12-21T13:48:30.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="frp配置本地服务端口到服务器80端口">
+<meta name="twitter:description" content="##搭建环境：
+
+ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
+
+apache tomcat 7
+
+java 7 
+
+frp 0.8.1 linux
+
+
+##搭建过程：
+
+资源准备
+frp 0.8.1 linux 二进制包
+tomcat
+任意版本jvm
+
+
+开始安装
+
+分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -60,7 +120,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | zhoudazhuang </title>
+  <title> frp配置本地服务端口到服务器80端口 | zhoudazhuang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -111,7 +171,7 @@ Quick">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            Home
+            Startseite
           </a>
         </li>
       
@@ -119,7 +179,7 @@ Quick">
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br />
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -127,7 +187,7 @@ Quick">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -143,7 +203,7 @@ Quick">
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             <i class="menu-item-icon icon-next-about"></i> <br />
-            About
+            Über
           </a>
         </li>
       
@@ -310,7 +370,7 @@ Quick">
           
           
             
-              Hello World
+              frp配置本地服务端口到服务器80端口
             
           
         </h1>
@@ -318,9 +378,9 @@ Quick">
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-12-17T20:33:36+08:00" content="2016-12-17">
-            2016-12-17
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2016-12-21T21:48:08+08:00" content="2016-12-21">
+            2016-12-21
           </time>
         </span>
 
@@ -338,15 +398,44 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p>##搭建环境：</p>
+<ol>
+<li><p>ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)</p>
+</li>
+<li><p>apache tomcat 7</p>
+</li>
+<li><p>java 7 </p>
+</li>
+<li><p>frp 0.8.1 linux</p>
+</li>
+</ol>
+<p>##搭建过程：</p>
+<ol>
+<li>资源准备<ul>
+<li>frp 0.8.1 linux 二进制包</li>
+<li>tomcat</li>
+<li>任意版本jvm</li>
+</ul>
+</li>
+<li><p>开始安装</p>
+<ol>
+<li><p>分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tomcat这里不再赘述）</p>
+ <figure class="highlight plain"><figcaption><span>-zxvf frp_0.8.1_linux.tar.gz```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 配置本地ubuntu 16.04 LTS 中frpc.ini为：</div></pre></td></tr></table></figure>
+<p>#frpc.ini<br>[common]<br>server_addr = #阿里云服务器ip地址<br>server_port = 7000<br>auth_token = 123</p>
+<p>[web]<br>type = http<br>local_port = 8889 #本地端口地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3. 修改阿里云服务器ubuntu 14.04 LTS版本frps.ini配置为：</div></pre></td></tr></table></figure>
+<h1 id="frps-ini"><a href="#frps-ini" class="headerlink" title="frps.ini"></a>frps.ini</h1><p> [common]<br> bind_port = 7000<br> vhost_http_port = 80</p>
+<p> [web]#不同标签名对应client中相同的标签<br> type = http<br> custom_domains = #阿里云服务器地址(即服务访问地址，这里最好这么配置)<br> auth_token = 123</p>
+<p> [web-home]<br> type = http<br> custom_domains = #同上一标签<br> auth_token = 123</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4. 启动服务</div></pre></td></tr></table></figure>
+<p>./frps -c ./frps.ini</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">5. 启动tomcat项目以及客户端</div><div class="line">   ``` ./frpc -c ./frpc.ini</div></pre></td></tr></table></figure>
+</li>
+<li><p>此时访问custom_domains标签设置的地址:80即可经过frp代理进入到本地服务调试。</p>
+</li>
+</ol>
+</li>
+</ol>
 </span>
       
     </div>
@@ -358,11 +447,11 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/19/tomcat配置https/" rel="prev">tomcat配置https</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/21/a-bit-of-go/" rel="next">a bit of go</a>
             
           </div>
         </div>
@@ -553,10 +642,10 @@ Quick">
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -570,22 +659,22 @@ Quick">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">categories</span>
+              <span class="site-state-item-name">Kategorien</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">tags</span>
+              <span class="site-state-item-name">Tags</span>
               </a>
           </div>
 
@@ -634,7 +723,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#frps-ini"><span class="nav-number">1.</span> <span class="nav-text">frps.ini</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

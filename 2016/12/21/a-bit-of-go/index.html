@@ -38,13 +38,37 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
+<meta name="description" content="#About Go Note
+##gopath
+
+sample mac
+ Go从1.1版本开始必须设置这个变量，而且不能和Go的安装目录一样，这个目录用来存放Go源码，Go的可运行文件，以及相应的编译之后的包文件。所以这个目录下面有三个子目录：src、bin、pkg。 
+
+
+不知道为啥这样弄，我觉得gopath应该放第三方类库，而且最好可以共用。还好gopath可以设置多个，让第一个做公共类库，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tomcat配置https">
-<meta property="og:url" content="http://yoursite.com/2016/12/19/tomcat配置https-1/index.html">
+<meta property="og:title" content="a bit of go">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/a-bit-of-go/index.html">
 <meta property="og:site_name" content="zhoudazhuang">
-<meta property="og:updated_time" content="2016-12-19T15:31:52.057Z">
+<meta property="og:description" content="#About Go Note
+##gopath
+
+sample mac
+ Go从1.1版本开始必须设置这个变量，而且不能和Go的安装目录一样，这个目录用来存放Go源码，Go的可运行文件，以及相应的编译之后的包文件。所以这个目录下面有三个子目录：src、bin、pkg。 
+
+
+不知道为啥这样弄，我觉得gopath应该放第三方类库，而且最好可以共用。还好gopath可以设置多个，让第一个做公共类库，">
+<meta property="og:updated_time" content="2016-12-21T13:46:33.345Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tomcat配置https">
+<meta name="twitter:title" content="a bit of go">
+<meta name="twitter:description" content="#About Go Note
+##gopath
+
+sample mac
+ Go从1.1版本开始必须设置这个变量，而且不能和Go的安装目录一样，这个目录用来存放Go源码，Go的可运行文件，以及相应的编译之后的包文件。所以这个目录下面有三个子目录：src、bin、pkg。 
+
+
+不知道为啥这样弄，我觉得gopath应该放第三方类库，而且最好可以共用。还好gopath可以设置多个，让第一个做公共类库，">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -54,7 +78,7 @@
   };
 </script>
 
-  <title> tomcat配置https | zhoudazhuang </title>
+  <title> a bit of go | zhoudazhuang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -105,7 +129,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            Home
+            Startseite
           </a>
         </li>
       
@@ -113,7 +137,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br />
-            Categories
+            Kategorien
           </a>
         </li>
       
@@ -121,7 +145,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -137,7 +161,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             <i class="menu-item-icon icon-next-about"></i> <br />
-            About
+            Über
           </a>
         </li>
       
@@ -304,7 +328,7 @@
           
           
             
-              tomcat配置https
+              a bit of go
             
           
         </h1>
@@ -312,9 +336,9 @@
 
       <div class="post-meta">
         <span class="post-time">
-          Posted on
-          <time itemprop="dateCreated" datetime="2016-12-19T23:31:52+08:00" content="2016-12-19">
-            2016-12-19
+          Veröffentlicht am
+          <time itemprop="dateCreated" datetime="2016-12-21T21:45:48+08:00" content="2016-12-21">
+            2016-12-21
           </time>
         </span>
 
@@ -332,7 +356,50 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><p>﻿#About Go Note</p>
+<p>##gopath</p>
+<ol>
+<li><p>sample mac</p>
+<p> Go从1.1版本开始必须设置这个变量，而且不能和Go的安装目录一样，这个目录用来存放Go源码，Go的可运行文件，以及相应的编译之后的包文件。所以这个目录下面有三个子目录：src、bin、pkg。 </p>
+</li>
+</ol>
+<p>不知道为啥这样弄，我觉得gopath应该放第三方类库，而且最好可以共用。<br>还好gopath可以设置多个，让第一个做公共类库，第二个做项目。<br>在mac下面设置：（假设~/Workspace_go/demo1<br>是工程目录）<br>命令行修改：~/.bash_profile<br>#set golang path<br>export GOROOT=/usr/local/go<br>export GOPATH=/usr/local/go_path:~/Workspace_go/demo1<br>export PATH=$PATH:/usr/local/go_path/bin</p>
+<ol>
+<li><p>linux<br><code>export GOPATH=~/golib:~/goproject
+ export GOROOT=/home/zhoudazhuang/usr/local/go/
+ export PATH=$GOROOT/bin:$GOBIN:$PATH:/home/zhoudazhuang/gobin
+ export GOBIN=~/gobin</code></p>
+<p> <code>go get github.com/astaxie/beego
+go get github.com/beego/bee
+cd ~/Workspace_go/demo1/src
+bee new hello
+cd hello
+bee run hello</code></p>
+<p> <code>zhoudazhuang@zhoudazhuang-pc:~$ go get github.com/beego/bee
+ package gopkg.in/yaml.v2: unrecognized import path &quot;gopkg.in/yaml.v2&quot; (https fetch: Get https://gopkg.in/yaml.v2?go-get=1: x509: certificate signed by unknown authority)</code><br> <strong>公司网络,证书有问题</strong></p>
+</li>
+<li>idea代码库导入<br><em>虽然可以编译，但是在idea里面找不到beego这个类库。<br>File -&gt; Project Structure 增加classpath,sourcepath 设置为/usr/local/go_path/src。</em></li>
+<li>面向struct(class),面向对象。<ul>
+<li>struct泛指class 如自定义类型</li>
+<li>函数并不从属于struct(或者以面向对象的术语来说，并不属于class)，他们是单独存在于struct外围，而非在概念上属于某个struct的。</li>
+<li>method非func（函数），method在func的标识func后添加（）作为使用者和接收者，于是此method便属于此struct(类似java-class)</li>
+<li>struct可使用.进行访问自有method</li>
+<li>method也是可以继承的。如果（struct）匿名字段实现了一个method，那么包含这个匿名字段的struct也能调用该method。</li>
+<li>method也可以重写。如果（struct）匿名字段实现了一个method，自己又不想调用继承的那个method，只需要自己实现一个同名method即可。</li>
+</ul>
+</li>
+<li>interface就是一组抽象方法的集合，它必须由其他非interface类型实现，而不能自我实现， Go通过interface实现了duck-typing:即”当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子”。<ul>
+<li>是否实现某个interface，必须看是否实现了里面所有的抽象方法</li>
+<li>interface和java里比较类似，可进行向上转型，即interface值可以持有所有子类，可用子类实例赋值给interface</li>
+<li>var a interface{} 空接口，类似java中object,所有类型都实现了空interface</li>
+</ul>
+</li>
+<li>常用的Socket类型有两种：流式Socket（SOCK_STREAM）和数据报式Socket（SOCK_DGRAM）。流式是一种面向连接的Socket，针对于面向连接的TCP服务应用；数据报式Socket是一种无连接的Socket，对应于无连接的UDP服务应用。</li>
+</ol>
+<ul>
+<li>7 应用层 6 表示层 5 会话层 4 传输层 3 网络层 2 数据链路层 1 物理层<br>   通过上面的介绍我们知道Socket有两种：TCP Socket和UDP Socket，TCP和UDP      是协议，而要确定一个进程的需要三元组，需要IP地址和端口。</li>
+</ul>
+</span>
       
     </div>
 
@@ -343,11 +410,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2016/12/21/frp配置本地服务端口到服务器80端口/" rel="prev">frp配置本地服务端口到服务器80端口</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/19/tomcat配置https/" rel="next">tomcat配置https</a>
+              <a href="/2016/12/21/a-bit-of-command/" rel="next">a bit of command</a>
             
           </div>
         </div>
@@ -538,10 +607,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table Of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -555,22 +624,22 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">categories</span>
+              <span class="site-state-item-name">Kategorien</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">tags</span>
+              <span class="site-state-item-name">Tags</span>
               </a>
           </div>
 
@@ -619,7 +688,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
