@@ -38,79 +38,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="##搭建环境：
-
-ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
-
-apache tomcat 7
-
-java 7 
-
-frp 0.8.1 linux
-
-
-##搭建过程：
-
-资源准备
-frp 0.8.1 linux 二进制包
-tomcat
-任意版本jvm
-
-
-开始安装
-
-分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
+<meta name="description" content="##博客已搬家：
+ 博客已由liongo以及google GCE支持搬家至http://www.anteoy.site,本站已关闭所有博客，欢迎常驻新站！！！另外欢迎访问我的CSDN个人博客http://blog.csdn.net/yan_chou">
 <meta property="og:type" content="article">
-<meta property="og:title" content="frp配置本地服务端口到服务器80端口">
-<meta property="og:url" content="http://yoursite.com/2016/12/21/frp配置本地服务端口到服务器80端口/index.html">
+<meta property="og:title" content="博客搬家">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/博客搬家/index.html">
 <meta property="og:site_name" content="zhoudazhuang">
-<meta property="og:description" content="##搭建环境：
-
-ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
-
-apache tomcat 7
-
-java 7 
-
-frp 0.8.1 linux
-
-
-##搭建过程：
-
-资源准备
-frp 0.8.1 linux 二进制包
-tomcat
-任意版本jvm
-
-
-开始安装
-
-分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
-<meta property="og:updated_time" content="2016-12-21T13:48:30.476Z">
+<meta property="og:description" content="##博客已搬家：
+ 博客已由liongo以及google GCE支持搬家至http://www.anteoy.site,本站已关闭所有博客，欢迎常驻新站！！！另外欢迎访问我的CSDN个人博客http://blog.csdn.net/yan_chou">
+<meta property="og:updated_time" content="2017-07-26T16:35:40.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="frp配置本地服务端口到服务器80端口">
-<meta name="twitter:description" content="##搭建环境：
-
-ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)
-
-apache tomcat 7
-
-java 7 
-
-frp 0.8.1 linux
-
-
-##搭建过程：
-
-资源准备
-frp 0.8.1 linux 二进制包
-tomcat
-任意版本jvm
-
-
-开始安装
-
-分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tom">
+<meta name="twitter:title" content="博客搬家">
+<meta name="twitter:description" content="##博客已搬家：
+ 博客已由liongo以及google GCE支持搬家至http://www.anteoy.site,本站已关闭所有博客，欢迎常驻新站！！！另外欢迎访问我的CSDN个人博客http://blog.csdn.net/yan_chou">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -120,7 +60,7 @@ tomcat
   };
 </script>
 
-  <title> frp配置本地服务端口到服务器80端口 | zhoudazhuang </title>
+  <title> 博客搬家 | zhoudazhuang </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -370,7 +310,7 @@ tomcat
           
           
             
-              frp配置本地服务端口到服务器80端口
+              博客搬家
             
           
         </h1>
@@ -379,8 +319,8 @@ tomcat
       <div class="post-meta">
         <span class="post-time">
           Veröffentlicht am
-          <time itemprop="dateCreated" datetime="2016-12-21T21:48:08+08:00" content="2016-12-21">
-            2016-12-21
+          <time itemprop="dateCreated" datetime="2017-07-27T00:28:08+08:00" content="2017-07-27">
+            2017-07-27
           </time>
         </span>
 
@@ -398,44 +338,8 @@ tomcat
       
 
       
-        <span itemprop="articleBody"><p>##搭建环境：</p>
-<ol>
-<li><p>ubuntu 16.04 LTS （本地服务计算机） ubuntu 14.04 LTS(阿里云服务器)</p>
-</li>
-<li><p>apache tomcat 7</p>
-</li>
-<li><p>java 7 </p>
-</li>
-<li><p>frp 0.8.1 linux</p>
-</li>
-</ol>
-<p>##搭建过程：</p>
-<ol>
-<li>资源准备<ul>
-<li>frp 0.8.1 linux 二进制包</li>
-<li>tomcat</li>
-<li>任意版本jvm</li>
-</ul>
-</li>
-<li><p>开始安装</p>
-<ol>
-<li><p>分别在服务端ubuntu和客户端ubuntu解压安装包（jdk以及tomcat这里不再赘述）</p>
- <figure class="highlight plain"><figcaption><span>-zxvf frp_0.8.1_linux.tar.gz```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2. 配置本地ubuntu 16.04 LTS 中frpc.ini为：</div></pre></td></tr></table></figure>
-<p>#frpc.ini<br>[common]<br>server_addr = #阿里云服务器ip地址<br>server_port = 7000<br>auth_token = 123</p>
-<p>[web]<br>type = http<br>local_port = 8889 #本地端口地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3. 修改阿里云服务器ubuntu 14.04 LTS版本frps.ini配置为：</div></pre></td></tr></table></figure>
-<h1 id="frps-ini"><a href="#frps-ini" class="headerlink" title="frps.ini"></a>frps.ini</h1><p> [common]<br> bind_port = 7000<br> vhost_http_port = 80</p>
-<p> [web]#不同标签名对应client中相同的标签<br> type = http<br> custom_domains = #阿里云服务器地址(即服务访问地址，这里最好这么配置)<br> auth_token = 123</p>
-<p> [web-home]<br> type = http<br> custom_domains = #同上一标签<br> auth_token = 123</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">4. 启动服务</div></pre></td></tr></table></figure>
-<p>./frps -c ./frps.ini</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">5. 启动tomcat项目以及客户端</div><div class="line">   ``` ./frpc -c ./frpc.ini</div></pre></td></tr></table></figure>
-</li>
-<li><p>此时访问custom_domains标签设置的地址:80即可经过frp代理进入到本地服务调试。</p>
-</li>
-</ol>
-</li>
-</ol>
+        <span itemprop="articleBody"><p>##博客已搬家：</p>
+<p> 博客已由liongo以及google GCE支持搬家至<a href="http://www.anteoy.site" target="_blank" rel="external">http://www.anteoy.site</a>,本站已关闭所有博客，欢迎常驻新站！！！另外欢迎访问我的CSDN个人博客<a href="http://blog.csdn.net/yan_chou" target="_blank" rel="external">http://blog.csdn.net/yan_chou</a></p>
 </span>
       
     </div>
@@ -443,18 +347,6 @@ tomcat
     <footer class="post-footer">
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/12/21/a-bit-of-go/" rel="next">a bit of go</a>
-            
-          </div>
-        </div>
       
 
       
@@ -659,7 +551,7 @@ tomcat
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
@@ -723,7 +615,7 @@ tomcat
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#frps-ini"><span class="nav-number">1.</span> <span class="nav-text">frps.ini</span></a></li></ol></div>
+              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -740,7 +632,7 @@ tomcat
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp; 
-  <span itemprop="copyrightYear">2016
+  <span itemprop="copyrightYear">2017
   </span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
